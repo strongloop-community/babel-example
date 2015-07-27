@@ -1,0 +1,25 @@
+{
+  "name": "babel-article",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel-tape-runner \"modules/**/__tests__/*-test.js\"",
+    "lint": "eslint modules index.js",
+    "clean": "rm -rf build || :",
+    "build": "npm run clean && cp -rf modules build && babel --optional runtime -d build ./modules"
+  },
+  "keywords": [],
+  "author": "Marc Harter <wavded@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "^5.8.5"
+  },
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-eslint": "^3.1.23",
+    "babel-tape-runner": "^1.1.0",
+    "blue-tape": "^0.1.10",
+    "eslint-config-standard": "^3.4.1"
+  }
+}
