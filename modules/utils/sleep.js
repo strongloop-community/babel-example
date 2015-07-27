@@ -4,5 +4,5 @@
  * @return {Promise}   resolves after millis elapse
  */
 export default function sleep (ms) {
-  return new Promise(resolve => setTimeout(res, ms))
+  return new Promise(resolve => setTimeout(resolve, ms))
 }
